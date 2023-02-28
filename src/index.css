@@ -1,0 +1,50 @@
+:root,
+[data-theme="light"] {
+  --background: #f9f4ef;
+  --headline: #020826;
+  --button: #8c7851;
+  --button-text: #fffffe;
+  --p: #716040;
+}
+
+[data-theme="dark"] {
+  --background: #0f0e17;
+  --headline: #fffffe;
+  --button: #ff8906;
+  --button-text: #fffffe;
+  --p: #a7a9be;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background);
+  transition: background-color .3s ease;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--headline);
+}
+
+p {
+  color: var(--p);
+}
+
+button {
+  background: var(--button);
+  color: var(--button-text);
+}
+
+button:hover {
+  border: 1px solid var(--button);
+  color: var(--button);
+  background-color: var(--background);
+}

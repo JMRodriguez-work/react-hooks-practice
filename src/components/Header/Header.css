@@ -1,0 +1,26 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 10rem;
+}
+
+.header_buttons {
+    display: flex;
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+.header_buttons > button {
+    background-color: var(--button);
+    color: var(--button-text);
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100px;
+    transition: all .3s ease;
+}
+

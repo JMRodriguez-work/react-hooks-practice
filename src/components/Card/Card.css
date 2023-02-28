@@ -1,0 +1,41 @@
+.card {
+    border: 1px solid var(--headline);
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    margin-bottom: 5px;
+}
+
+.card-img {
+    width: 70%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 3px;
+    flex: 1;
+}
+
+.alive {
+    color: red;
+    
+}
+
+.unknown {
+    color: blue;
+}
+
+.dead {
+    color: #000;
+}
