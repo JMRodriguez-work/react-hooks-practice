@@ -15,10 +15,7 @@ const Header = ({ darkMode, setDarkMode }) => {
       <h1 style={{ color }}>React Hooks</h1>
       <div className="header_buttons">
         <button type="button" onClick={handleClick}>
-          {darkMode ? "Go to Light Mode" : "Go to Dark Mode"}
-        </button>
-        <button type="button" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "Go to Light Mode 2" : "Go to Dark Mode 2"}
+          {darkMode ? "Light Mode" : "Dark Mode"}
         </button>
       </div>
     </div>
