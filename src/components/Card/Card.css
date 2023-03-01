@@ -18,10 +18,20 @@
 }
 .fav-icon {
     color: red;
+    transition: all .5s ease;
+}
+
+.fav-icon:hover {
+    scale: calc(1.2);
 }
 
 .nofav-icon {
     color: var(--headline);
+    transition: all .5s ease;
+}
+
+.nofav-icon:hover {
+   scale:calc(1.2);
 }
 
 .card-img {
