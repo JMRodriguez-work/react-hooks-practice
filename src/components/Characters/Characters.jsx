@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer, useMemo } from "react";
+import React, { useState, useEffect, useReducer, useMemo, useRef } from "react";
 import { favoriteReducer, initialState, ACTIONS } from "../../reducer/index";
 import { Card } from "../index";
 import "./Characters.css";
@@ -9,6 +9,7 @@ const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [state, dispatch] = useReducer(favoriteReducer, initialState);
   const [search, setSearch] = useState("");
+  const searchInput = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,8 +34,8 @@ const Characters = () => {
     });
   };
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
+  const handleSearch = () => {
+    setSearch(searchInput.current.value);
   };
 
   const filteredCharacters = useMemo(() => 
@@ -53,6 +54,7 @@ const Characters = () => {
       </div>
       <div className="searchbar">
         <input
+          ref={searchInput}
           className="input__searchbar"
           value={search}
           type="search"
