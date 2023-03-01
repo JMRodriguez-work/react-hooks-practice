@@ -12,7 +12,7 @@ const Header = ({ darkMode, setDarkMode }) => {
 
   return (
     <div className="Header">
-      <h1 style={{ color }}>React Hooks</h1>
+      <h1 style={{ color }} translate="no">React Hooks</h1>
       <div className="header_buttons">
         <button type="button" onClick={handleClick}>
           {darkMode ? "Light Mode" : "Dark Mode"}

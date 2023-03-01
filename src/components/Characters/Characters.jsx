@@ -52,7 +52,7 @@ const Characters = () => {
   return (
     <div className="wrapper">
       <div className="myfavorites">
-        <h2 className="fav-title">Favorites</h2>
+        <h2 className="fav-title" translate="no">Favorites</h2>
         <div className="fav-wrapper">
           {state.favorites.map((favorite) => (
             <img className="fav-img" key={favorite.id} src={favorite.image} />
