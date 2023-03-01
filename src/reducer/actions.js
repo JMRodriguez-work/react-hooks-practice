@@ -1,6 +1,6 @@
 const ACTIONS = {
     ADD_TO_FAVORITE: 'ADD_TO_FAVORITE',
-  
+    REMOVE_FROM_FAVORITE: 'REMOVE_FROM_FAVORITE',
   }
 
-export default ACTIONS;
+export { ACTIONS };
