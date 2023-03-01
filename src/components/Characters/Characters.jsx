@@ -1,6 +1,13 @@
-import React, { useState, useEffect, useReducer, useMemo, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useReducer,
+  useMemo,
+  useRef,
+  useCallback,
+} from "react";
 import { favoriteReducer, initialState, ACTIONS } from "../../reducer/index";
-import { Card } from "../index";
+import { Card, Search } from "../index";
 import "./Characters.css";
 
 const URL_API = "https://rickandmortyapi.com/api/character";
@@ -34,13 +41,21 @@ const Characters = () => {
     });
   };
 
-  const handleSearch = () => {
-    setSearch(searchInput.current.value);
-  };
+  // const handleSearch = () => {
+  //   setSearch(searchInput.current.value);
+  // };
 
-  const filteredCharacters = useMemo(() => 
-    characters.filter((character) => character.name.toLowerCase().includes(search.toLowerCase())) 
-  , [characters, search])
+  const handleSearch = useCallback(() => {
+    setSearch(searchInput.current.value);
+  }, [])
+
+  const filteredCharacters = useMemo(
+    () =>
+      characters.filter((character) =>
+        character.name.toLowerCase().includes(search.toLowerCase())
+      ),
+    [characters, search]
+  );
 
   return (
     <div className="wrapper">
@@ -52,16 +67,11 @@ const Characters = () => {
           ))}
         </div>
       </div>
-      <div className="searchbar">
-        <input
-          ref={searchInput}
-          className="input__searchbar"
-          value={search}
-          type="search"
-          placeholder="Search a character"
-          onChange={(e) => handleSearch(e)}
-        />
-      </div>
+      <Search
+        search={search}
+        searchInput={searchInput}
+        handleSearch={handleSearch}
+      />
       <div className="Characters">
         {filteredCharacters.map((character) => (
           <Card

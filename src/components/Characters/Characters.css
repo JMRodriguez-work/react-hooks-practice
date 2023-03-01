@@ -15,27 +15,8 @@
     border-radius: 50%;
     margin: 0 0 20px -10px;
 }
-/*SEARCH BAR SECTION*/
 
-.searchbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0 50px 0;
-}
 
-.input__searchbar {
-    outline: none;
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-size: 16px;
-    border: none;
-    width: 22vw;
-    height: 40px;
-    font-family: "Roboto", sans-serif;
-    border: 1px solid var(--p);
-    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.75);
-}
 
 
 /*CHARACTERS SECTION*/
