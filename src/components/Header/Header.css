@@ -9,7 +9,7 @@
 .header_buttons {
     display: flex;
     gap: 10px;
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
 }
 
 .header_buttons > button {
