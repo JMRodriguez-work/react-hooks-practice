@@ -6,8 +6,8 @@ import ThemeContext from "./context/ThemeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ThemeContext.Provider value="blue">
+    {/* <ThemeContext.Provider value="blue"> */}
       <App />
-    </ThemeContext.Provider>
+    {/* </ThemeContext.Provider> */}
   </React.StrictMode>
 );
